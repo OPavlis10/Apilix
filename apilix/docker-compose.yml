@@ -1,0 +1,15 @@
+# Local MariaDB for development: docker compose up -d
+services:
+  mariadb:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: apilix
+      MARIADB_USER: apilix
+      MARIADB_PASSWORD: apilix
+      MARIADB_ROOT_PASSWORD: root
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports: ["3306:3306"]
+    volumes: [mariadb_data:/var/lib/mysql]
+volumes:
+  mariadb_data:

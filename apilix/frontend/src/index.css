@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass { @apply bg-white/70 border border-zinc-200 backdrop-blur-md dark:bg-ink-900/70 dark:border-lilac/20; }
+  .chip  { @apply inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 font-mono text-[11px] leading-4
+                  border-zinc-200 text-zinc-600 dark:border-lilac/20 dark:text-zinc-400; }
+}
